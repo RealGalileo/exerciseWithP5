@@ -111,6 +111,11 @@ function keyPressed() {
     }
 }
 
+function mousePressed() {
+    snake.body.push(new Body(snake.body[snake.length - 1].x, snake.body[snake.length - 1].y));
+    snake.length++;
+}
+
 function setup() { //once
     createCanvas(600, 600);
     gridX = width / scl;
